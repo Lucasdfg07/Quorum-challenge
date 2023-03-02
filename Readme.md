@@ -28,11 +28,11 @@ Here are the technologies used in this project.
   - They are in `./public/answers` folder.
 
 ## Code Challenge Questions
-  -  Discuss your solution’s time complexity. What tradeoffs did you make?
+  -  Discuss your solution's time complexity. What tradeoffs did you make?
   
     - Made this application thinking in a better architecture to read, understand and use this in the future. So I built a CSV reader to read and write csv data. And also separated all the classes in models to have a better understanding and logic in the code.
   
-  -  How would you change your solution to account for future columns that might be requested, such as “Bill Voted On Date” or “Co-Sponsors”?
+  -  How would you change your solution to account for future columns that might be requested, such as 'Bill Voted On Date' or 'Co-Sponsors'?
   
     - I built a generic method in `csv_reader.rb` that set dynamically the columns and you only have to change the columns in the model. So If you want to generate more csv files to other models, or want to add more columns, It's only call `save_csv_of` method setting the property `file_name`, `file_title` (First line of csv) and `columns`, updating it in the property model.
   
