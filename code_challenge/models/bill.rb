@@ -1,9 +1,9 @@
 class Bill
-  attr_accessor :id, :title, :primary_sponsor
+  attr_accessor :id, :title, :sponsor_id
 
-  def initialize(id, title, primary_sponsor)
+  def initialize(id, title, sponsor_id)
     @id = id
     @title = title
-    @primary_sponsor = primary_sponsor
+    @primary_sponsor = sponsor_id
   end
 end

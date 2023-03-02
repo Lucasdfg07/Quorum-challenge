@@ -2,14 +2,13 @@ require_relative './vote_result.rb'
 
 class Legislator
   attr_accessor :id, :name
-  attr_reader :supported_bills
 
   def initialize(id, name)
     @id = id
     @name = name
   end
 
-  def supported_bills
+  def num_supported_bills
     check_number_of_votes_as(1)
   end
 
@@ -19,6 +18,10 @@ class Legislator
 
   def vote_results
     all_vote_results.map { |vote| vote if vote.legislator_id == id }.compact
+  end
+
+  def get_csv_attributes
+    [self.id, self.name, self.num_supported_bills, self.num_opposed_bills]
   end
 
   private
