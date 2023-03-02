@@ -1,17 +1,17 @@
 class CSVReader
   def self.bills
-    CSV.read('bills.csv')
+    CSV.read('./public/bills.csv')
   end
 
-  def self.legistators
-    CSV.read('legistators.csv')
+  def self.legislators
+    CSV.read('./public/legislators.csv')
   end
 
   def self.vote_results
-    CSV.read('vote_results.csv')
+    CSV.read('./public/vote_results.csv')
   end
 
   def self.votes
-    CSV.read('votes.csv')
+    CSV.read('./public/votes.csv')
   end
 end

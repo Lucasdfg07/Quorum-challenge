@@ -11,6 +11,15 @@ class LegislatorReader
     #   csv << ['another', 'row']
     # end
   end
+
+  def legislators
+    CSVReader.legislators[1..].map do |legislator| 
+      legislator = Legislator.new(legislator[0], legislator[1])
+      byebug
+    end
+  end
 end
 
-LegislatorReader.new.scan_legislators_bill_votes
+LegislatorReader.new.legislators
+
+# LegislatorReader.new.scan_legislators_bill_votes
