@@ -3,7 +3,6 @@ require_relative './models/legislator.rb'
 require_relative './models/bill.rb'
 
 require 'csv'
-require 'byebug'
 
 class LegislatorReader
   LEGISLATOR_SUPPORT_OPPOSE_CSV_COLUMNS = ['id', 'name', 'num_supported_bills', 'num_opposed_bills']
